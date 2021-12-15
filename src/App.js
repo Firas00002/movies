@@ -17,7 +17,7 @@ function App() {
      image: 'https://fr.web.img6.acsta.net/pictures/21/08/02/16/08/1706767.jpg', 
      title: "Lacasa de papel", 
      date:'1/12/1990',
-     Rating:'2'
+     Rating:2
     
     },
     { 
@@ -71,7 +71,7 @@ const handleRating=(x)=>setRating(x)
         <MovieList handleRating={handleRating} rating={rating} state={state} list={list} setList={setList} />
         
         <Addmovie add={handleadd} />
-        <Moviecard state={state} list={list} /> 
+        <Moviecard state={state} list={list} rating={rating} /> 
         
     </div>
   );

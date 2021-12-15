@@ -9,17 +9,7 @@ const Moviecard = ({state,list,rating}) => {
     return (
         
         <div>
-            {state.filter((x)=> {
-                if(list === ""){
-                return x
-            } else if (x.title.toLowerCase().includes(list.toLowerCase()) ){
-                return x
-
-            }else if(x.Rating >=rating ){
-                return x
-            }
-            
-            }).map((el,i) => <article key={i} className='movie-card'>
+            {state.filter(x=>(x.title.toLowerCase().includes(list.toLowerCase()) && x.Rating>=rating )).map((el,i) => <article key={i} className='movie-card'>
                <a href={el.lien}> <img
 
                     src={el.image}

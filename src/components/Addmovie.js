@@ -19,7 +19,7 @@ const Addmovie = ({add}) => {
   const [title, setTitle] = useState('')
   const [date, setDate] = useState('')
   const [image, setImage] = useState('')
-  const [rating, setRating] = useState('1')
+  const [Rating, setRating] = useState('1')
 const [modalIsOpen, setIsOpen] = React.useState (false);
     function openModal() {
         setIsOpen(true);
@@ -39,7 +39,7 @@ const [modalIsOpen, setIsOpen] = React.useState (false);
        id:Math.random(),
         title,
         date,
-        rating,
+        Rating,
         image,
         
       }
@@ -66,7 +66,7 @@ const [modalIsOpen, setIsOpen] = React.useState (false);
          <label>img</label>
          <input value={image} type='url' onChange={(e)=>setImage(e.target.value)} required></input>   
          <label>Rating</label>
-         <StarsRating handleRating={handleRating} rating={rating} />
+         <StarsRating handleRating={handleRating} rating={Rating} />
          <button type='sumbit'>confirm</button>
          <button>cancel</button>
          </form>
